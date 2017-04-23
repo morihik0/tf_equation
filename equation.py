@@ -30,7 +30,7 @@ merged = tf.summary.merge_all()
 # session
 with tf.Session() as sess:
     writer = tf.summary.FileWriter('log', sess.graph)
-    sess.run(tf.initialize_all_variables())
+    sess.run(tf.global_variables_initializer())
 
     #learn
     for step in range(40000):
